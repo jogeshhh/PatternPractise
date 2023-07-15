@@ -100,18 +100,109 @@ public class PyramidPractiseClass {
 		}
 	}
 	
+	public static void rhombusPattern(int n) {
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n-i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 1; j <= n; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+	public static void diamondStarPattern(int n) {
+		//print the upper half triangle
+		for (int i = 1; i <=n; i++) {
+			for (int j = 1; j <=n-i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 1; j <=i; j++) {
+				System.out.print("*");
+			}
+			for (int j = 2; j <=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		//print the lower half triangle
+		for (int i = n-1; i >=1; i--) {
+			for (int j = 1; j <=n-i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 1; j <=i; j++) {
+				System.out.print("*");
+			}
+			for (int j = 2; j <=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+	}
+
+	public static void butterflyStarPattern(int n) {
+		//print the upper half triangle
+		for (int i = 1; i <=n; i++) {
+			for (int j = 1; j <=i; j++) {
+				System.out.print("*");
+			}
+			for (int j = 1; j <=n-i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 1; j <=n-i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 1; j <=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		//print the mirror copy of upper half
+		for (int i = n; i >=1; i--) {
+			for (int j = 1; j <=i; j++) {
+				System.out.print("*");
+			}
+			for (int j = 1; j <=n-i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 1; j <=n-i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 1; j <=i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+	}
+
+	public static void squareFillPattern(int n) {
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= n; j++) {
+				System.out.print("* ");					
+			}			
+			System.out.println();
+		}
+	}
 	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int i=6;
-//		squareHollowPattern(i);
-//		numberTrianglePattern(i);
-//		numberIncreasingRightTrianglePattern(i);
-//		numberIncreasingReverseRightTrianglePattern(i);
-//		numberChangingPyramidPattern(i);
-//		zeroOneTrianglePyramidPattern(i);
+		squareHollowPattern(i);
+		numberTrianglePattern(i);
+		numberIncreasingRightTrianglePattern(i);
+		numberIncreasingReverseRightTrianglePattern(i);
+		numberChangingPyramidPattern(i);
+		zeroOneTrianglePyramidPattern(i);
 		palindromeTrianglePattern(i);
+		rhombusPattern(i);
+		diamondStarPattern(i);
+		butterflyStarPattern(i);
+		squareFillPattern(i);
+		
 		
 	}
 
