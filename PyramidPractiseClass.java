@@ -1,4 +1,5 @@
 import java.security.PublicKey;
+import java.util.Scanner;
 
 public class PyramidPractiseClass {
 
@@ -416,14 +417,124 @@ public class PyramidPractiseClass {
 		}
 	}
 	
+	public static void triangleWithRepeatingPattern(int n) {
+		for (int i = 1; i <= n ; i++) {
+			for (int j = 1; j <= i ; j++) {
+				System.out.print(j+" ");
+			}
+			for (int j = i-1; j >= 1 ; j--) {
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void invertedDoubleTriangles(int n) {
+		for (int i = 1; i <= n ; i++) {
+			for (int j = 1; j <= i-1 ; j++) {
+				System.out.print(" ");
+			}
+			for (int j = i; j <= n ; j++) {
+				System.out.print(j);
+			}
+			System.out.println();
+		}
+		for (int i = n-1; i >= 1 ; i--) {
+			for (int j = 1; j <= i-1 ; j++) {
+				System.out.print(" ");
+			}
+			for (int j = i; j <= n ; j++) {
+				System.out.print(j);
+			}
+			System.out.println();
+		}
+	}
 	
 	
+	public static void invertedDoubleTriangles2(int n) {
+		for (int i = 1; i <= n ; i++) {
+			for (int j = 1; j <= i-1 ; j++) {
+				System.out.print(" ");
+			}
+			for (int j = i; j <= n ; j++) {
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+		for (int i = n-1; i >= 1 ; i--) {
+			for (int j = 1; j <= i-1 ; j++) {
+				System.out.print(" ");
+			}
+			for (int j = i; j <= n ; j++) {
+				System.out.print(j+" ");
+			}
+			System.out.println();
+		}
+	}
+
+	public static void digitPillarPattern(int n) {
+		for (int i = 1; i <= n ; i++) {
+			for (int j = 1; j <= n-i ; j++) {
+				System.out.print(1);
+			}
+			for (int j = 1; j <= i ; j++) {
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void binaryDigitPattern(int n) {
+		for (int i = 1; i <= n ; i++) {
+			for (int j = 1; j <= n ; j++) {
+				if ((i+j)%2==0) {
+					System.out.print(1);					
+				}
+				else {
+					System.out.print(0);										
+				}
+			}
+			System.out.println();
+		}
+	}
+	
+	
+	public static void ascendingTrianglePattern(int n) { //complex
+		for (int i = 1; i <= n ; i++) {
+			System.out.print(i+" ");
+			int x =1;
+			int y = i;
+			
+			for (int j = n-1; j > n-i ; j--) {
+				y=y+(n-x);
+			    x++;
+			    System.out.print(y+" ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void ascendingTrianglePattern2(int n) { //easy and alternative to ascendingTrianglePattern
+		for (int i = 1; i <= n ; i++) {
+			int num=i;
+			for (int j = 1; j <= i ; j++) {
+			    System.out.print(num+" ");
+			    num=num+n-j;
+			}
+			System.out.println();
+		}
+	}
+	
+
 	
 	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int i=5;
+		System.out.println("Enter the number to create pattern: ");
+		Scanner sc = new Scanner(System.in);
+		int i= sc.nextInt();
+		
 //		squareHollowPattern(i);
 //		numberTrianglePattern(i);
 //		numberIncreasingRightTrianglePattern(i);
@@ -447,7 +558,14 @@ public class PyramidPractiseClass {
 //		triangleHollowStarPatternReverse(i);
 //		diamondHollowPatternReverse(i);
 //		hourglassHollowPattern(i);
-		pascalTrianglePattern(i);
+//		pascalTrianglePattern(i);
+//		triangleWithRepeatingPattern(i);
+//		invertedDoubleTriangles(i);
+//		invertedDoubleTriangles2(i);
+//		digitPillarPattern(i);
+//		binaryDigitPattern(i);
+		ascendingTrianglePattern2(i);
+		
 		
 		
 		
